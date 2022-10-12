@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ConfirmOrderIceCream">
+
+    <ImageView
+        android:id="@+id/Ice_Icon_price"
+        android:src="@drawable/img_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/Ice_Your_Order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your order:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/Ice_Icon_price"
+        app:layout_constraintTop_toBottomOf="@id/Ice_Icon_price"
+        />
+    <TextView
+        android:id="@+id/Ice_you_are_ordering"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You are ordering a Ice cream"
+        android:layout_marginVertical="10dp"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/Ice_Your_Order"
+        app:layout_constraintTop_toBottomOf="@id/Ice_Your_Order"
+        />
+    <TextView
+        android:id="@+id/Ice_Extras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Extras:"
+        android:layout_marginVertical="10dp"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/Ice_you_are_ordering"
+        app:layout_constraintTop_toBottomOf="@id/Ice_you_are_ordering"
+        />
+    <Button
+        android:id="@+id/Ice_Place"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/Ice_Extras"
+        app:layout_constraintTop_toBottomOf="@id/Ice_Extras"
+        android:text="Place Order"
+        android:onClick="PlaceOrderOnclick_Ice"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cancel"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/purple_500"
+        app:layout_constraintStart_toStartOf="@id/Ice_Place"
+        app:layout_constraintTop_toBottomOf="@id/Ice_Place"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ConfirmOrderBurger">
+
+    <ImageView
+        android:id="@+id/Icon_price"
+        android:src="@drawable/img_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/Burger_Your_Order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your order:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/Icon_price"
+        app:layout_constraintTop_toBottomOf="@id/Icon_price"
+        />
+    <TextView
+        android:id="@+id/Burger_you_are_ordering"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You are ordering a Burger"
+        android:layout_marginVertical="10dp"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/Burger_Your_Order"
+        app:layout_constraintTop_toBottomOf="@id/Burger_Your_Order"
+        />
+    <TextView
+        android:id="@+id/Burger_Extras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Extras:"
+        android:layout_marginVertical="10dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/Burger_you_are_ordering"
+        app:layout_constraintTop_toBottomOf="@id/Burger_you_are_ordering"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BurgerRG"
+        android:layout_marginTop="20dp"
+
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/Burger_Extras"
+        app:layout_constraintTop_toBottomOf="@id/Burger_Extras"
+        >
+    <RadioButton
+        android:id="@+id/Burger_RB_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/Burger_Extras"
+        app:layout_constraintTop_toBottomOf="@id/Burger_Extras"
+        android:text=" Large Meal ($4.99 extera)"
+        android:textSize="15sp"
+        />
+    <RadioButton
+        android:id="@+id/Burger_RB_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/Burger_RB_1"
+        app:layout_constraintTop_toBottomOf="@id/Burger_RB_1"
+        android:text=" Small Meal ($2.49 extera)"
+        android:textSize="15sp"
+        />
+    <RadioButton
+        android:id="@+id/Burger_RB_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/Burger_RB_2"
+        app:layout_constraintTop_toBottomOf="@id/Burger_RB_2"
+        android:text=" No Meal"
+        android:textSize="15sp"
+        />
+    </RadioGroup>
+    <Button
+        android:id="@+id/Burger_Place"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/BurgerRG"
+        app:layout_constraintTop_toBottomOf="@id/BurgerRG"
+        android:text="Place Order"
+        android:onClick="PlaceOrderOnclick"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cancel"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/purple_500"
+        app:layout_constraintStart_toStartOf="@id/Burger_Place"
+        app:layout_constraintTop_toBottomOf="@id/Burger_Place"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
